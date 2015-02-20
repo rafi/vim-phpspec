@@ -26,10 +26,10 @@ if (!exists('g:phpspec_default_mapping') || g:phpspec_default_mapping)
 	map <leader>sps :PhpSpecSwitch<CR>
 endif
 
-command -nargs=0 PhpSpecRun          call phpspec#run()
-command -nargs=0 PhpSpecRunCurrent   call phpspec#run_current()
-command -nargs=1 PhpSpecDesc         call phpspec#describe(<f-args>)
-command -nargs=0 PhpSpecSwitch       call phpspec#switch()
+command! -nargs=0 PhpSpecRun          call phpspec#run()
+command! -nargs=0 PhpSpecRunCurrent   call phpspec#run_current()
+command! -nargs=1 PhpSpecDesc         call phpspec#describe(<f-args>)
+command! -nargs=0 PhpSpecSwitch       call phpspec#switch()
 
 function s:load_phpspec_yml(yml_path)
 python << EOF
